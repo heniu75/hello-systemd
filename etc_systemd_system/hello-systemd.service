@@ -1,0 +1,11 @@
+[Unit]
+Description=Sample hello to systemd
+After=network.target
+
+[Service]
+User=hein
+WorkingDirectory=/home/hein/bin
+ExecStart=/home/hein/bin/echo_date_to_textfile
+
+[Install]
+WantedBy=multi-user.target
